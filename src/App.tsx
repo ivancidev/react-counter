@@ -29,7 +29,7 @@ function App() {
       <Counter count={count} />
         <ButtonComponent onClick={() => setCount(count + inputValue)} label='Sumar'/>
         <ButtonComponent onClick={() => setCount(count - inputValue)} label='Restar'/>
-        <ButtonComponent onClick={() => setCount(0)} label='Reset'/>
+        { count !== 0 && (<ButtonComponent onClick={() => setCount(0)} label='Reset'/>)}
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
